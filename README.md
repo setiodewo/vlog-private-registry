@@ -7,19 +7,19 @@ Referensi:
 
 Buat folder reg untuk menyimpan file2 yg dibutuhkan
 
-## 1. Setup nginx (container-based)
+### 1. Setup nginx (container-based)
 
   Kita memerlukan nginx untuk proxy_pass, buat authentikasi & SSL
 
   1. Buat Dockerfile untuk nginx (lihat file Dockerfile)
   2. Buat subfolder ./auth untuk menyimpan file autentikasi
 
-## 2. Install Registry
+### 2. Install Registry
 
   1. Buat docker-compose.yml (lihat docker-compose.yml)
   2. Buat subfolder ./data.
 
-## 3. Jalankan
+### 3. Jalankan
 
   ```
   docker compose up --build
@@ -31,7 +31,7 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   curl http://localhost/v2/_catalog
   ```
 
-## 4. Buat user & password
+### 4. Buat user & password
 
   Masuk container nginx
 
@@ -53,7 +53,7 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   htpasswd -B registry.password namausernya
   ```
 
-## 5. Naikkan ukuran upload nginx
+### 5. Naikkan ukuran upload nginx
 
   Masuk ke container
 
@@ -77,7 +77,7 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   docker restart nginx
   ```
 
-## 6. Login ke registry
+### 6. Login ke registry
 
   Login dengan cli:
 
@@ -95,7 +95,7 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   docker push localhost/nginx:latest
   ```
 
-## 7. Tambahkan IP dari registry ke insecure-registries
+### 7. Tambahkan IP dari registry ke insecure-registries
 
   Jika kita menggunakannya di LAN, maka tidak perlu setup HTTPS. Jadi cukup tambahkan alamat IP registry kita ke server2 yang nantinya pull/push image via registry kita.
 
@@ -115,13 +115,13 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   "insecure-registries" : [ "192.168.0.133:5000" ]
   ```
 
-## 8. Jika ingin menggunakan HTTPS
+### 8. Jika ingin menggunakan HTTPS
 
   1. Pastikan memiliki IP public & domain name yg sudah pointing ke IP tsb.
   2. Bisa menggunakan letsencrypt untuk mendapatkan key SSL.
   3. Redirect port 80 ke 443.
   4. Masukkan public & private key di konfigurasi nginx (/etc/nginx/conf.d/default.conf).
 
-# Xenara Cafe and Coworking Space
+## Xenara Cafe and Coworking Space
 
 Ruko Citra Grand, Blok London C-08, Semarang, Jawa Tengah, Indonesia
