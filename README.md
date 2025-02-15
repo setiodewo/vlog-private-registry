@@ -100,10 +100,12 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   Jika kita menggunakannya di LAN, maka tidak perlu setup HTTPS. Jadi cukup tambahkan alamat IP registry kita ke server2 yang nantinya pull/push image via registry kita.
 
   Buat file /etc/docker/daemon.json dengan isi sbb:
+  Note: Ubah IP sesuai dengan alamat server kalian ya
+  Note: Jika sudah menggunakan nginx proxy_pass, maka tidak perlu port 5000
 
   ```
   {
-    "insecure-registries" : [ "192.168.0.133:500" ]
+    "insecure-registries" : [ "192.168.0.133:5000" ]
   }
   ```
 
@@ -113,11 +115,9 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   "insecure-registries" : [ "192.168.0.133:5000" ]
   ```
 
-  Hilangkan port 5000 jika sudah proxy_pass dengan nginx.
-
 ## 8. Jika ingin menggunakan HTTPS
 
-  1. Pastikan memiliki IP public & domain name.
+  1. Pastikan memiliki IP public & domain name yg sudah pointing ke IP tsb.
   2. Bisa menggunakan letsencrypt untuk mendapatkan key SSL.
   3. Redirect port 80 ke 443.
   4. Masukkan public & private key di konfigurasi nginx (/etc/nginx/conf.d/default.conf).
