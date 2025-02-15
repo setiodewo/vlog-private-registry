@@ -107,8 +107,10 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   Jika kita menggunakannya di LAN, maka tidak perlu setup HTTPS. Jadi cukup tambahkan alamat IP registry kita ke server2 yang nantinya pull/push image via registry kita.
 
   Buat file /etc/docker/daemon.json dengan isi sbb:
-  Note: Ubah IP sesuai dengan alamat server kalian ya
-  Note: Jika sudah menggunakan nginx proxy_pass, maka tidak perlu port 5000
+  
+  ~Note~: Ubah IP sesuai dengan alamat server kalian ya
+  
+  *Note*: Jika sudah menggunakan nginx proxy_pass, maka tidak perlu port 5000
 
   ```
   {
