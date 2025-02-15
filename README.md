@@ -121,10 +121,8 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   ```
 
   <ins>**NOTES:**</ins>
-
-    - Ubah IP sesuai dengan alamat server kalian ya.
-
-    - Jika sudah menggunakan nginx proxy_pass, maka tidak perlu port 5000.
+  - Ubah IP sesuai dengan alamat server kalian ya.
+  - Jika sudah menggunakan nginx proxy_pass, maka tidak perlu port 5000.
 
 
 ## 8. Jika ingin menggunakan HTTPS
