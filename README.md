@@ -4,7 +4,6 @@ Referensi:
   - What is Registry? https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-registry/
   - Image Docker Registry https://hub.docker.com/_/registry
   - Tutorial Setup Private Docker Registry https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-20-04
-  - 
 
 Buat folder reg untuk menyimpan file2 yg dibutuhkan
 
@@ -17,7 +16,7 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
 
 ## 2. Install Registry
 
-  1. docker-compose.yml (lihat docker-compose.yml)
+  1. Buat docker-compose.yml (lihat docker-compose.yml)
   2. Buat subfolder ./data.
 
 ## 3. Jalankan
@@ -98,6 +97,8 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
 
 ## 7. Tambahkan IP dari registry ke insecure-registries
 
+  Jika kita menggunakannya di LAN, maka tidak perlu setup HTTPS. Jadi cukup tambahkan alamat IP registry kita ke server2 yang nantinya pull/push image via registry kita.
+
   Buat file /etc/docker/daemon.json dengan isi sbb:
 
   ```
@@ -113,6 +114,13 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   ```
 
   Hilangkan port 5000 jika sudah proxy_pass dengan nginx.
+
+## 8. Jika ingin menggunakan HTTPS
+
+  1. Pastikan memiliki IP public & domain name.
+  2. Bisa menggunakan letsencrypt untuk mendapatkan key SSL.
+  3. Redirect port 80 ke 443.
+  4. Masukkan public & private key di konfigurasi nginx (/etc/nginx/conf.d/default.conf).
 
 # Xenara Cafe and Coworking Space
 
