@@ -108,7 +108,7 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
 
   Buat file /etc/docker/daemon.json dengan isi sbb:
   
-  ~Note~: Ubah IP sesuai dengan alamat server kalian ya
+  _Note_: Ubah IP sesuai dengan alamat server kalian ya
   
   *Note*: Jika sudah menggunakan nginx proxy_pass, maka tidak perlu port 5000
 
