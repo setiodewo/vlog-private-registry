@@ -109,7 +109,7 @@ Buat folder reg untuk menyimpan file2 yg dibutuhkan
   }
   ```
 
-  Jika menggunakan Docker Desktop, maka harus ditambahkan di setting > docker engine:
+  Jika menggunakan Docker Desktop, maka harus ditambahkan di Setting > Docker Engine:
 
   ```
   "insecure-registries" : [ "192.168.0.133:5000" ]
