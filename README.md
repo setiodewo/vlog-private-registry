@@ -1,3 +1,5 @@
+[![DevOps Komodo](https://img.youtube.com/vi/NK5K2bMS2DI/0.jpg)](https://www.youtube.com/watch?v=NK5K2bMS2DI)
+
 # VLOG PRIVATE DOCKER REGISTRY
 
 Referensi:
